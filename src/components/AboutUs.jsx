@@ -18,7 +18,6 @@ export default function AboutUs() {
 
   return (
     <section id="about" className="bg-white">
-      {/* Top padding + roomy container to match site rhythm */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
         <motion.div
           initial={reduce ? {} : "hidden"}
@@ -27,7 +26,7 @@ export default function AboutUs() {
           variants={container}
           className="text-center"
         >
-          {/* Subtle overline to mimic footer's clean separators */}
+          {/* overline */}
           <div className="mx-auto mb-6 w-20 h-0.5 bg-zest-yellow rounded-sm" />
 
           <motion.h2
@@ -49,7 +48,7 @@ export default function AboutUs() {
           </motion.p>
         </motion.div>
 
-        {/* Cards: sleeker card visual (soft border, subtle card lift on hover) */}
+        {/* Cards */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12"
           initial={reduce ? {} : "hidden"}
@@ -59,60 +58,60 @@ export default function AboutUs() {
         >
           <motion.article
             variants={item}
-            className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 shadow-[0_6px_18px_rgba(15,23,42,0.04)] hover:shadow-lg transition-shadow transform hover:-translate-y-1"
+            className="card-surface p-6 sm:p-8 text-center"
             aria-labelledby="mission"
           >
             <div className="w-14 h-14 rounded-xl bg-zest-yellow/10 text-zest-yellow flex items-center justify-center mx-auto mb-4">
               <FaBullseye className="text-2xl" />
             </div>
 
-            <h3 id="mission" className="text-lg sm:text-xl font-semibold text-black mb-2 text-center">
+            <h3 id="mission" className="text-lg sm:text-xl font-semibold text-black mb-2">
               Our Mission
             </h3>
 
-            <p className="text-sm text-gray-700 text-center">
+            <p className="text-sm text-gray-700">
               Empower F&B brands to shine online with viral campaigns, influencer collaborations, and innovative content marketing.
             </p>
           </motion.article>
 
           <motion.article
             variants={item}
-            className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 shadow-[0_6px_18px_rgba(15,23,42,0.04)] hover:shadow-lg transition-shadow transform hover:-translate-y-1"
+            className="card-surface p-6 sm:p-8 text-center"
             aria-labelledby="vision"
           >
             <div className="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-4">
               <FaLightbulb className="text-2xl" />
             </div>
 
-            <h3 id="vision" className="text-lg sm:text-xl font-semibold text-black mb-2 text-center">
+            <h3 id="vision" className="text-lg sm:text-xl font-semibold text-black mb-2">
               Our Vision
             </h3>
 
-            <p className="text-sm text-gray-700 text-center">
+            <p className="text-sm text-gray-700">
               Make every F&B brand stand out with creative campaigns that attract customers, boost engagement, and drive growth.
             </p>
           </motion.article>
 
           <motion.article
             variants={item}
-            className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 shadow-[0_6px_18px_rgba(15,23,42,0.04)] hover:shadow-lg transition-shadow transform hover:-translate-y-1"
+            className="card-surface p-6 sm:p-8 text-center"
             aria-labelledby="journey"
           >
             <div className="w-14 h-14 rounded-xl bg-gray-50 text-black flex items-center justify-center mx-auto mb-4">
               <FaUsers className="text-2xl" />
             </div>
 
-            <h3 id="journey" className="text-lg sm:text-xl font-semibold text-black mb-2 text-center">
+            <h3 id="journey" className="text-lg sm:text-xl font-semibold text-black mb-2">
               Our Journey
             </h3>
 
-            <p className="text-sm text-gray-700 text-center">
+            <p className="text-sm text-gray-700">
               With 100+ clients onboard, our journey spans from festive feasts in Guwahati to coffee culture in Bengaluru—and we’re just getting started.
             </p>
           </motion.article>
         </motion.div>
 
-        {/* Closing paragraph + subtle divider (footer-like finishing touch) */}
+        {/* Closing paragraph + subtle divider */}
         <motion.div
           initial={reduce ? {} : "hidden"}
           whileInView={reduce ? {} : "show"}
@@ -121,10 +120,10 @@ export default function AboutUs() {
           className="mt-12 text-center"
         >
           <motion.p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-6" variants={item}>
-            From viral reels to live coffee raves, Zestway turns food, culture, and creativity into campaigns that excite, engage, and grow your brand.
+            From viral reels to live coffee raves, Zestway turns food, culture, and creativity
+            into campaigns that excite, engage, and grow your brand.
           </motion.p>
 
-          {/* thin divider to match footer visual language */}
           <div className="mx-auto w-full max-w-xl border-t border-gray-100" />
         </motion.div>
       </div>

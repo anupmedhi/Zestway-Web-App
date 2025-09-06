@@ -88,8 +88,8 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-zest-yellow" aria-hidden />
-                <a href="mailto:zestwaysupport@gmail.com" className="hover:text-white transition">
-                  zestwaysupport@gmail.com
+                <a href="mailto:zestwayindia@gmail.com" className="hover:text-white transition">
+                  zestwayindia@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">

@@ -18,7 +18,8 @@ export default function JoinUs() {
     <section
       id="join"
       className="relative bg-cover bg-center py-20 sm:py-28 px-4 sm:px-6 text-center"
-      style={{ backgroundImage: "url('/images/coffee-cover.jpg')" }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/coffee-cover.jpg)` }}
+
       aria-label="Join Zestway community"
     >
       {/* Dark overlay (slightly stronger for readability) */}

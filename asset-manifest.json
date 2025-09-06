@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Zestway-Web-App/static/css/main.a1108f9c.css",
-    "main.js": "/Zestway-Web-App/static/js/main.db64d624.js",
+    "main.js": "/Zestway-Web-App/static/js/main.5f04b426.js",
     "static/js/488.82edb0a5.chunk.js": "/Zestway-Web-App/static/js/488.82edb0a5.chunk.js",
     "index.html": "/Zestway-Web-App/index.html",
     "main.a1108f9c.css.map": "/Zestway-Web-App/static/css/main.a1108f9c.css.map",
-    "main.db64d624.js.map": "/Zestway-Web-App/static/js/main.db64d624.js.map",
+    "main.5f04b426.js.map": "/Zestway-Web-App/static/js/main.5f04b426.js.map",
     "488.82edb0a5.chunk.js.map": "/Zestway-Web-App/static/js/488.82edb0a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a1108f9c.css",
-    "static/js/main.db64d624.js"
+    "static/js/main.5f04b426.js"
   ]
 }

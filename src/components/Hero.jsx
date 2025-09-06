@@ -54,7 +54,7 @@ function Hero() {
         {/* Subtext */}
         <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-12 sm:mb-16 max-w-xl mx-auto">
           Join the revolution in Food & Beverage campaigns, viral content, community
-          events and an awesome experince.
+          events and an awesome experience.
         </p>
 
         {/* CTA */}

@@ -1,4 +1,4 @@
-// Header.jsx
+// src/components/Header.jsx
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, useReducedMotion } from "framer-motion";
@@ -6,7 +6,10 @@ import { motion, useReducedMotion } from "framer-motion";
 function Header() {
   const [shadow, setShadow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [imgError, setImgError] = useState(false);
   const reduce = useReducedMotion();
+
+  const logoSrc = `${process.env.PUBLIC_URL || ""}/images/zestway-logo.png`;
 
   useEffect(() => {
     const handleScroll = () => setShadow(window.scrollY > 50);
@@ -27,16 +30,28 @@ function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo with infinite rotation */}
-        <a href="#hero" className="flex items-center gap-3" aria-label="Zestway home">
-          <motion.img
-            src="/images/zestway-logo.png"
-            alt="Zestway India"
-            draggable="false"
-            className="h-12 sm:h-14 md:h-16 w-auto object-contain"
-            animate={reduce ? {} : { rotate: 360 }}
-            transition={reduce ? {} : { repeat: Infinity, duration: 12, ease: "linear" }}
-          />
+        {/* Logo / Brand */}
+        <a href="#hero" className="flex items-center gap-3 no-underline" aria-label="Zestway home">
+          {!imgError ? (
+            <motion.img
+              src={logoSrc}
+              alt="Zestway India"
+              draggable="false"
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain"
+              onError={(e) => {
+                console.warn("Logo not found at:", logoSrc);
+                setImgError(true);
+                e.currentTarget.style.display = "none";
+              }}
+              // Rotation animation
+              animate={reduce ? {} : { rotate: 360 }}
+              transition={reduce ? {} : { repeat: Infinity, duration: 12, ease: "linear" }}
+            />
+          ) : (
+            <span className="text-xl sm:text-2xl font-extrabold text-zest-yellow">
+              Zestway India
+            </span>
+          )}
           <span className="sr-only">Zestway India</span>
         </a>
 

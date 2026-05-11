@@ -5,72 +5,73 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden px-6 lg:px-8"
-      aria-label="Zestway hero section"
+      className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden px-6 lg:px-8 bg-gray-50 pt-20"
+      aria-label="Zestway India Hero Section"
     >
-      {/* Modern Mesh Gradient Background */}
-      <div className="absolute inset-0 z-0 bg-white">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-zest-yellow/30 blur-[120px]" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] rounded-full bg-orange-200/40 blur-[100px]" />
-        <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] rounded-full bg-yellow-100/50 blur-[80px]" />
+      {/* Premium Background Elements */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[40%] h-[50%] rounded-full bg-zest-yellow/20 blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[35%] h-[40%] rounded-full bg-blue-100/40 blur-[100px]" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        
+        {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center lg:text-left pt-10 lg:pt-0"
         >
-          {/* Emojis row */}
-          <div className="mb-6 flex justify-center gap-4 text-2xl sm:text-3xl opacity-80" aria-hidden>
-            <span>🍟</span>
-            <span>🍕</span>
-            <span>🥤</span>
-            <span>🍔</span>
-            <span>🧋</span>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white border border-gray-200 shadow-sm text-sm font-semibold text-gray-700"
+          >
+            Your Growth Partner for Food & Beverage Businesses
+          </motion.div>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 tracking-tight text-zest-black leading-[1.1]">
-            Step into the <br className="hidden md:block" /> future of F&B with{" "}
-            <span className="relative inline-block text-zest-yellow">
-              Zestway
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-zest-yellow/30" viewBox="0 0 100 12" preserveAspectRatio="none">
-                <path d="M0,10 Q50,0 100,10" stroke="currentColor" strokeWidth="8" fill="none" />
-              </svg>
-            </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-zest-black tracking-tight leading-[1.15] mb-6">
+            Grow Your Food & Beverage Business With The <span className="text-blue-600">Right Partner</span>
           </h1>
-
-          {/* Subtext */}
-          <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
-            Join the revolution in Food & Beverage campaigns, viral content, community
-            events and an awesome experience.
+          
+          <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+            From branding and marketing to operations and technology, Zestway India helps food & beverage businesses scale smarter, attract more customers, and increase profitability.
           </p>
 
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <motion.a
-              href="https://docs.google.com/forms/d/1uHEwnk5S4F3FGiT0VLz4SyFnkpPc24qKbYIhTWiVMLg/edit"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
+              href="#contact"
+              whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative w-full sm:w-auto px-10 py-5 bg-zest-black text-white rounded-2xl font-bold text-lg shadow-premium hover:bg-zinc-800 transition-all overflow-hidden"
+              className="w-full sm:w-auto px-8 py-4 bg-zest-yellow text-zest-black rounded-xl font-bold text-lg shadow-premium hover:bg-yellow-400 transition-all text-center"
             >
-              <span className="relative z-10">Register Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-zest-yellow/0 via-zest-yellow/10 to-zest-yellow/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              Let’s Grow Your Business
             </motion.a>
-
-            <a
-              href="#about"
-              className="text-zest-black font-semibold hover:text-zest-yellow transition-colors flex items-center gap-2 px-6 py-3"
+            
+            <motion.a
+              href="#consultation"
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto px-8 py-4 bg-white text-zest-black border border-gray-200 rounded-xl font-bold text-lg shadow-sm hover:shadow-md transition-all text-center"
             >
-              Learn more
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </a>
+              Book A Consultation
+            </motion.a>
+          </div>
+        </motion.div>
+
+        {/* Right Image/Graphics Using Provided Photo */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="relative hidden lg:block"
+        >
+          <div className="relative w-full aspect-[4/3] lg:aspect-square rounded-[2.5rem] bg-white shadow-premium border border-gray-100 overflow-hidden flex items-center justify-center">
+             <img src="/images/vibrant-hero.png" alt="Zestway Hero" className="w-full h-full object-cover" />
+             <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent pointer-events-none" />
+             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-zest-yellow rounded-full blur-2xl opacity-60 pointer-events-none" />
           </div>
         </motion.div>
       </div>

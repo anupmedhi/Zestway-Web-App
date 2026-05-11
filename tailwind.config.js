@@ -9,9 +9,10 @@ module.exports = {
       colors: {
         zest: {
           yellow: "#FFD84D",
+          blue: "#2563EB", // Standard Tailwind blue-600 for high contrast
           black: "#0A0A0A",
           white: "#FFFFFF",
-          accent: "#FF4D4D",
+          accent: "#2563EB",
           gray: {
             50: "#F9FAFB",
             100: "#F3F4F6",

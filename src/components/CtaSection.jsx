@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function CtaSection() {
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfcDlDbhVI5XV_ZOdidchhgLFBvMyCtmyBh1PVzN3WZB5O1Eg/viewform";
+
   return (
     <section id="contact" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
@@ -41,16 +43,19 @@ function CtaSection() {
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
               <motion.a
-                href="#meeting"
+                href={formUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto px-10 py-5 bg-zest-yellow text-zest-black rounded-2xl font-bold text-lg shadow-[0_0_40px_-10px_rgba(255,216,77,0.5)] hover:bg-yellow-400 transition-all flex items-center justify-center gap-2"
               >
                 Schedule A Meeting
-                <span className="text-xl">📅</span>
               </motion.a>
               <motion.a
-                href="#consultation"
+                href={formUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto px-10 py-5 bg-white/5 border border-white/10 backdrop-blur-md text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all"

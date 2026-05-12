@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Hero() {
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfcDlDbhVI5XV_ZOdidchhgLFBvMyCtmyBh1PVzN3WZB5O1Eg/viewform";
+
   return (
     <section
       id="hero"
@@ -42,7 +44,9 @@ function Hero() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <motion.a
-              href="#contact"
+              href={formUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto px-8 py-4 bg-zest-yellow text-zest-black rounded-xl font-bold text-lg shadow-premium hover:bg-yellow-400 transition-all text-center"
@@ -51,7 +55,9 @@ function Hero() {
             </motion.a>
             
             <motion.a
-              href="#consultation"
+              href={formUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="w-full sm:w-auto px-8 py-4 bg-white text-zest-black border border-gray-200 rounded-xl font-bold text-lg shadow-sm hover:shadow-md transition-all text-center"

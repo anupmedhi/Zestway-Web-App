@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { FiMonitor, FiPackage, FiUsers, FiPieChart, FiMapPin, FiHeart, FiArrowRight } from "react-icons/fi";
 
 function PosTeaser() {
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfcDlDbhVI5XV_ZOdidchhgLFBvMyCtmyBh1PVzN3WZB5O1Eg/viewform";
+
   const features = [
     {
       title: "Smart Billing",
@@ -72,7 +74,9 @@ function PosTeaser() {
             </p>
 
             <motion.a
-              href="#contact"
+              href={formUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ x: 5 }}
               className="inline-flex items-center gap-2 text-zest-yellow font-bold text-lg hover:text-yellow-400 transition-colors group"
             >

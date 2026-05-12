@@ -5,6 +5,16 @@ import { FiTrendingUp, FiCamera, FiBriefcase, FiMonitor, FiFeather } from "react
 function Services() {
   const services = [
     {
+      title: "Sales Growth",
+      icon: <FiTrendingUp size={24} />,
+      items: [
+        "We charge on your sales",
+        "Sales execution",
+        "ROI-focused growth",
+      ],
+      color: "bg-orange-50 text-orange-600",
+    },
+    {
       title: "Brand Development",
       icon: <FiFeather size={24} />,
       items: [

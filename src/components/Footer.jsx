@@ -109,8 +109,8 @@ function Footer() {
                   <FaEnvelope size={15} />
                 </span>
                 <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-zinc-500">Email</p>
-                <a href="mailto:hello@zestway.in" className="break-words hover:text-zest-yellow transition-colors">
-                  hello@zestway.in
+                <a href="mailto:zestwayindia@gmail.com" className="break-words hover:text-zest-yellow transition-colors">
+                  zestwayindia@gmail.com
                 </a>
               </li>
               <li className="rounded-lg border border-zinc-800 bg-zest-black p-4">

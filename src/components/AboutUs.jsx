@@ -88,8 +88,8 @@ function AboutUs() {
               {/* Redesigned Premium Quote Block */}
               <div className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 shadow-sm">
                 <div className="absolute top-4 left-4 text-blue-200 opacity-50 text-6xl font-serif leading-none">"</div>
-                <p className="relative z-10 text-blue-900 font-semibold text-lg md:text-xl leading-relaxed pl-6">
-                  We are not just another marketing agency. We become an extended growth partner for your business.
+                <p className="relative z-10 text-blue-900 font-semibold text-xl md:text-2xl leading-relaxed pl-6">
+                  Zestway is your growth partner.
                 </p>
               </div>
             </div>

@@ -33,7 +33,7 @@ function AboutUs() {
 
               {/* Overlapping Secondary Image */}
               <div className="absolute bottom-0 left-0 w-[65%] h-[65%] rounded-[2rem] overflow-hidden shadow-premium border-[6px] md:border-8 border-white z-20">
-                <img src="/images/chef-plating.png" alt="Chef Plating" className="w-full h-full object-cover" />
+                <img src="/images/about-food-spread.jpg" alt="Food and drinks spread" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-5 left-5 md:bottom-6 md:left-6 text-white">
                   <div className="font-bold text-3xl md:text-4xl mb-1 text-zest-yellow leading-none">100+</div>

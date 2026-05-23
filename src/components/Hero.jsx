@@ -1,8 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+const heroImages = [
+  {
+    src: "/images/hero-food-spread.jpg",
+    alt: "A vibrant Zestway food spread with pizza, burgers, tacos, and drinks",
+    position: "center",
+  },
+  {
+    src: "/images/hero-croissant.jpg",
+    alt: "A croissant sandwich and sides served in a colorful cafe setting",
+    position: "center",
+  },
+  {
+    src: "/images/hero-table-spread.jpg",
+    alt: "A restaurant table spread with pizza, burger, pasta, and drinks",
+    position: "center",
+  },
+];
 
 function Hero() {
   const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfcDlDbhVI5XV_ZOdidchhgLFBvMyCtmyBh1PVzN3WZB5O1Eg/viewform";
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    heroImages.slice(1).forEach(({ src }) => {
+      const image = new Image();
+      image.src = src;
+    });
+
+    if (prefersReducedMotion) {
+      return undefined;
+    }
+
+    const rotation = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) => (currentIndex + 1) % heroImages.length);
+    }, 4000);
+
+    return () => window.clearInterval(rotation);
+  }, []);
 
   return (
     <section
@@ -67,7 +105,7 @@ function Hero() {
           </div>
         </motion.div>
 
-        {/* Right Image/Graphics Using Provided Photo */}
+        {/* Right Image/Graphics Using Provided Photos */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -75,7 +113,20 @@ function Hero() {
           className="relative hidden lg:block"
         >
           <div className="relative w-full aspect-[4/3] lg:aspect-square rounded-[2.5rem] bg-white shadow-premium border border-gray-100 overflow-hidden flex items-center justify-center">
-             <img src="/images/vibrant-hero.png" alt="Zestway Hero" className="w-full h-full object-cover" />
+             {heroImages.map((image, index) => (
+               <img
+                 key={image.src}
+                 src={image.src}
+                 alt={image.alt}
+                 loading={index === 0 ? "eager" : "lazy"}
+                 fetchPriority={index === 0 ? "high" : "auto"}
+                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                   index === activeImageIndex ? "opacity-100" : "opacity-0"
+                 }`}
+                 style={{ objectPosition: image.position }}
+                 aria-hidden={index !== activeImageIndex}
+               />
+             ))}
              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent pointer-events-none" />
              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-zest-yellow rounded-full blur-2xl opacity-60 pointer-events-none" />
           </div>
